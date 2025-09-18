@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <style>
+        nav {
+            position: sticky;
+            top:0;
+            display: flex;
+            justify-content: space-around;
+            padding: 1em;
+        }
+
+        .nav-links {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .banner {
+            background-color: lightpink;
+            background-size: cover;
+        }
+
+        .banner-text {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2em;
+        }
+
+        .banner-image img {
+            width: 100%;
+            height: auto;
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: space-around;
+            padding: 2em;
+        }
+
+        .card {
+            background-color: lightgray;
+            padding: 1rem;
+            margin: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            width: 30%;
+        }
+
+        .features h2 {
+            text-align: center;
+            margin-top: 1em;
+            margin-bottom: 0em;
+            font-size: 4em;
+        }
+
+        footer{
+            margin-left: 2em;
+            margin-right: 2em;
+        }
+
+        .contact-container{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        i{
+            margin-top: 0.5em;
+        }
+
+        @media screen and (max-width: 768px) {
+            .card-container {
+                flex-direction: column;
+                align-items: center;
+
+            }
+
+            .card {
+                width: 80%;
+                margin-bottom: 1em;
+            }
+
+            .features h2 {
+                font-size: 2em;
+            }
+            .banner-text {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .contact-container{
+                flex-direction: column;
+            }
+            i{
+                margin-bottom: 0.25em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="nav-bar" style="background-color: pink;">
+        <div class="nav-links">
+            <a href="/banner">Home</a>
+        </div>
+        <div class="nav-links">
+            <a href="/features">About</a>
+        </div>
+        <div class="nav-links">
+            <a href="/footer">Contact</a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="banner" id="banner">
+            <div class="banner-text">
+                <div>
+                    <h1>Welcome to GlamSphere</h1>
+                    <p>Makeup with Care</p>
+                </div>
+                <div>
+                    <button>Get Started</button>
+                </div>
+            </div>
+            <div class="banner-image">
+                <img src="data:image/jpeg;base64,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"
+                    alt="Banner Image">
+            </div>
+        </div>
+
+
+        <div class="features" id="features">
+            <h2>Why Choose us ?</h2>
+            <div class="card-container">
+                <div class="card">
+                    <i class="fa-solid fa-ranking-star"></i>
+                    <h3>Quality Products</h3>
+                    <p>We offer a wide range of high-quality makeup products that are safe and effective.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-shield-heart"></i>
+                    <h3>Made with Care</h3>
+                    <p>Our products are curated with love</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-face-smile-wink"></i>
+                    <h3>Customer Satisfaction</h3>
+                    <p>We are committed to providing excellent customer service and ensuring your satisfaction with
+                        every purchase.</p>
+                </div>
+            </div>
+        </div>
+        
+
+    </main>
+
+
+    <footer id="footer">
+        <div class="contact-container">
+            <div class="address">
+                <i class="fa-solid fa-location-dot"></i>
+                ThoughtClan Technologies
+                <br>
+                <i class="fa-solid fa-phone"></i> 
+                +91 987654321
+                <br>
+                <i class="fa-solid fa-inbox"></i>
+                hello@glamsphere.com
+            </div>
+            <div class="social-media">
+                <i class="fa-brands fa-instagram"></i> @weareglamsphere
+                <br>
+                <i class="fa-brands fa-youtube"></i> GlamSphere Makeup
+                <br>
+                <i class="fa-brands fa-x-twitter"></i> @glamsphereshop
+            </div>
+        </div>
+        <p>Created with <i class="fa-solid fa-heart"></i> by Fatima</p>
+    </footer>
+</body>
+
+<script>
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute('href').substring(1);
+            const targetDiv = document.getElementById(targetId);
+
+            if (targetDiv) {
+                targetDiv.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+</script>
+
+</html>
