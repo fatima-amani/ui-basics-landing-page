@@ -9,7 +9,7 @@
     <style>
         nav {
             position: sticky;
-            top:0;
+            top: 0;
             display: flex;
             justify-content: space-around;
             padding: 1em;
@@ -19,6 +19,11 @@
             font-size: 1.2em;
             font-weight: bold;
         }
+
+        .nav-links:hover {
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
 
         a {
             text-decoration: none;
@@ -34,6 +39,17 @@
             justify-content: space-between;
             align-items: center;
             padding: 2em;
+        }
+
+        #banner-btn {
+            background-color: transparent;
+            border: 1px solid lightcoral;
+            border-radius: 2px;
+            padding: 0.5em;
+        }
+
+        #banner-btn:hover {
+            background-color: wheat;
         }
 
         .banner-image img {
@@ -63,17 +79,17 @@
             font-size: 4em;
         }
 
-        footer{
+        footer {
             margin-left: 2em;
             margin-right: 2em;
         }
 
-        .contact-container{
+        .contact-container {
             display: flex;
             justify-content: space-between;
         }
 
-        i{
+        i {
             margin-top: 0.5em;
         }
 
@@ -92,15 +108,17 @@
             .features h2 {
                 font-size: 2em;
             }
+
             .banner-text {
                 flex-direction: column;
                 text-align: center;
             }
 
-            .contact-container{
+            .contact-container {
                 flex-direction: column;
             }
-            i{
+
+            i {
                 margin-bottom: 0.25em;
             }
         }
@@ -128,7 +146,7 @@
                     <p>Makeup with Care</p>
                 </div>
                 <div>
-                    <button>Get Started</button>
+                    <button id="banner-btn">Get Started</button>
                 </div>
             </div>
             <div class="banner-image">
@@ -159,7 +177,7 @@
                 </div>
             </div>
         </div>
-        
+
 
     </main>
 
@@ -168,9 +186,9 @@
         <div class="contact-container">
             <div class="address">
                 <i class="fa-solid fa-location-dot"></i>
-                ThoughtClan Technologies
+                Bengaluru
                 <br>
-                <i class="fa-solid fa-phone"></i> 
+                <i class="fa-solid fa-phone"></i>
                 +91 987654321
                 <br>
                 <i class="fa-solid fa-inbox"></i>
