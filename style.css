@@ -89,7 +89,7 @@ nav {
 
 .features h2 {
     text-align: center;
-    margin-bottom: 3em;
+    margin-bottom: 1em;
     font-size: 3em;
     color: #2c2c2c;
 }
@@ -131,11 +131,20 @@ nav {
 .card p {
     color: #666;
 }
-
 footer {
     background-color: #2c2c2c;
     color: white;
     padding: 3em 2em;
+}
+
+footer a {
+    text-decoration: none;
+    color: inherit;
+    background: none;
+}
+
+footer a:hover{
+    text-shadow: #fff;
 }
 
 .contact-container {
@@ -220,4 +229,5 @@ footer p i {
     footer {
         padding: 2em 1em;
     }
+
 }
